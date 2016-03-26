@@ -1,0 +1,19 @@
+<%= form_for(:task, :url=>{:action=>'add', :controller=>"tasks"}, :remote=>true) do |f| %>
+	<table>
+		<tr>
+			<td>Title</td>
+			<td><%= f.text_field(:title) %></td>
+		</tr>
+		<tr>
+			<td>Content</td>
+			<td><%= f.text_field(:content) %></td>
+		</tr>
+		<tr style="display:none">
+			<td><%= f.hidden_field(:is_use) %></td>
+		</tr>
+		
+	</table>
+	<div class="form-button">
+		<%= submit_tag("Add task") %>
+	</div>
+<% end %>

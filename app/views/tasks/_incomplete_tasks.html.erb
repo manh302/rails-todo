@@ -1,0 +1,7 @@
+<% @incomplete_tasks.each do |task1| %>
+	<h4 class="incomplete" id="incomplete_task_<%=task1.id%>">
+	<%= task1.title + ":" +	task1.content %>
+	<%= link_to("update", {:action=>"update", :controller=>"tasks", 
+		:id=>task1.id, :is_use=>0}, :remote=>true) %>
+	</h4>
+<% end %>
