@@ -1,8 +1,10 @@
 <% @complete_tasks.each do |task2| %>
+	<span style="display:inline" id="_complete_task_<%=task2.id%>">
 	<h4 class="complete" id="complete_task_<%=task2.id%>">
 	<%= task2.title + ":" +	task2.content %>
-	<%= link_to("remove", {:action=>"remove", :controller=>"tasks"}, :remote=>true) %>
-
 	</h4>
+	<%= link_to("remove", {:action=>"remove", :controller=>"tasks", :id=>task2.id}, 
+	:remote=>true) %>
+	</span>
 <% end %>
 

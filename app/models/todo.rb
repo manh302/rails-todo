@@ -1,3 +1,4 @@
 class Todo < ActiveRecord::Base
-	scope :InUse, lambda { where(:is_use=>true)  }
+	scope :incomplete_task, lambda { where(:is_use=>true)  }
+	scope :complete_task, lambda { where(:is_use=>false)  }
 end

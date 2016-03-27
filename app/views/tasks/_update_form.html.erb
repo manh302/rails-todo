@@ -1,0 +1,5 @@
+<%= form_for(:task, :url=>{:action=>'update', :controller=>"tasks"}, :remote=>true) do |f| %>
+	<%= f.hidden_field(:title) %>	
+	<%= f.hidden_field(:content) %>	
+	<%= f.hidden_field(:is_use) %>
+<% end %>

@@ -1,7 +1,12 @@
 <h1>Check list</h1>
 
 <%= link_to("New task" ,{:action=>"new_task"}, id: "new_link", remote: true) %>
-
+<div id="update_form">
+	<%= render(:partial=>"update_form", :object=>@task) %>
+</div>
+<span style="display:none">
+	<a href="#" id="complete_update_link" data-remote="true"></a>
+</span>
 <h2> Incomplete task</h2>
 <div class="tasks" id="incomplete_tasks">
 	<%= render(:partial=>"incomplete_tasks", :object=>@incomplete_tasks) %>
