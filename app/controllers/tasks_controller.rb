@@ -23,9 +23,10 @@ class TasksController < ApplicationController
 
   def update
     @task = Todo.find(params[:id]);
-    if @task.update_attributes(task_params2);
+    if @task.update_attributes(task_params2)
       @incomplete_tasks = Todo.incomplete_task
       @complete_tasks = Todo.complete_task
+      @data = "alert me"
       respond_to do |format|
         format.html { redirect_to(:action=>"index")}
         format.js

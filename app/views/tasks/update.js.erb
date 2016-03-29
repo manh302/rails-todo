@@ -1,4 +1,5 @@
 $(function(){
+
 	var is_completed = '<%= @task.is_use %>';
 	if(is_completed == false || is_completed == 'false')	{
 		$("#_incomplete_task_<%=@task.id%>").remove();

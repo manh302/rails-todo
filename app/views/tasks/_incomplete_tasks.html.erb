@@ -2,8 +2,10 @@
 	<span style="diaplay:inline" id="_incomplete_task_<%=task1.id%>">
 	<h4 class="incomplete" id="incomplete_task_<%=task1.id%>">
 		<%= task1.title + ":" +	task1.content %>
-	</h4>
-	<a href="./tasks/update/<%= task1.id%>?is_use=0" class="incomplete_update_link" 
+
+		<a href="./tasks/update/<%= task1.id%>?is_use=0" class="incomplete_update_link" 
 	data-remote="true"	id="incomplete_task_link_<%=task1.id %>">update</a>
+	</h4>
+	
 	</span>
 <% end %>

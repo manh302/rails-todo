@@ -12,11 +12,18 @@
 		<tr style="display:none">
 			<td><%= f.hidden_field(:is_use) %></td>
 		</tr>
-		
-	</table>
-	<div class="form-button">
+		<tr>
+			<td></td>
+			<td>
+					<div class="form-button">
 		<%= submit_tag("Add task", :class=>"form-control btn btn-primary", 
 		:style=>"width:200px") %>
 	</div>
+				
+			</td>
+		</tr>
+		
+	</table>
+
 <% end %>
 </div>
